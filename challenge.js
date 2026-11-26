@@ -11,6 +11,13 @@ const frutas = [
   { name: "tangerine", size: "litle", color: "orange" },
 ];
 
+console.log(frutas[0].color)
+console.log(frutas[1].color)
+console.log(frutas[2].color)
+console.log(frutas[3].color)
+console.log(frutas[4].color)
+console.log(frutas[5].color)
+
 /***------------------------- */
 
 /***** Ejercicio 2 **********
@@ -18,7 +25,19 @@ const frutas = [
  Haz que solo funcione con estos colores.
  */
 
+  let light = "green";
+  let driveCar = null;
 
+if (light === "red") {
+  driveCar = "Stop!";
+  } else if (light === "yellow") {
+    driveCar = "Wait...";
+  } else if (light === "green") {
+    driveCar = "Go.";
+  } else{
+    light = "light malfunction"
+  }
+  console.log("light is", light, "so car should", driveCar)
 
 
 
@@ -40,7 +59,8 @@ en una variable.
 
 const weekDays = ["Sunday", "Tuesday", "Monday", "Wednesday"];
 
-
+const Tuesday = weekDays.splice (1,1)[0]
+weekDays.splice(2,0,Tuesday)
 
 
 
@@ -57,13 +77,17 @@ y añádelo al array "numTimesSeven". No utilices loops.
 
 */
 
+
+
 const num = [1, 2, 3];
 
 const numTimesSeven = [];
 
+numTimesSeven.push(num.shift() *7);
+numTimesSeven.push(num.shift() *7);
+numTimesSeven.push(num.shift() *7);
 
-
-
+console.log("Question #9 ", num.length === 0 && numTimesSeven[1] === 14 ? "is correct." : "is incorrect.");
 
 
 
